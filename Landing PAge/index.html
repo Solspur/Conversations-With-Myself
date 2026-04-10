@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversations With Myself // John Wiley</title>
+    <style>
+        :root {
+            /* We are using the main colors from the image (green, cream, midnight) */
+            --paper: #e8dab2; /* Aged cream from the text in the image */
+            --midnight-dark: #070707; /* Darkest ground tone */
+            --star: #fffef0; /* Starlight highlight */
+            --serif: "EB Garamond", serif;
+        }
+
+        body {
+            background-color: var(--midnight-dark);
+            /* --- YOUR IMAGE AS THE BACKGROUND --- */
+            background-image: url('Conversations-with-myself.png'); /* <<< REPLACE THIS */
+            background-size: cover; /* Covers the whole screen */
+            background-position: center; /* Centers on the figure */
+            background-attachment: fixed; /* Parallax effect: image stays still as you scroll */
+            color: var(--paper);
+            font-family: var(--serif);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around; /* Distribute content around the figure */
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* An invisible overlay makes text more readable without ruining the image */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(180deg, rgba(7,7,7,0.4) 0%, rgba(7,7,7,0.1) 50%, rgba(7,7,7,0.8) 100%);
+            z-index: -1;
+        }
+
+        header { margin-top: -100px; /* Moves the title up into the dark area */ }
+        header h1 { 
+            font-size: 3.5rem; 
+            font-weight: 300; 
+            font-style: italic; 
+            margin: 0; 
+            color: var(--star); /* Use bright starlight for the main title */
+            letter-spacing: -2px;
+        }
+        .subtitle { text-transform: uppercase; letter-spacing: 5px; font-size: 0.8rem; opacity: 0.7; margin-bottom: 30px; }
+
+        /* Pre-save button (the focal point) */
+        .presave-link {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--midnight-dark);
+            background: var(--paper);
+            padding: 15px 30px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 2px;
+            transition: 0.4s ease;
+            box-shadow: 0 0 20px rgba(232, 218, 178, 0.4);
+        }
+
+        .presave-link:hover {
+            background: transparent;
+            color: var(--paper);
+            box-shadow: 0 0 30px rgba(232, 218, 178, 0.7);
+        }
+
+        /* Transparent, low-profile tracklist over the grass */
+        .tracklist {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: -100px; /* Moves it down towards the ground */
+            opacity: 0.8; /* Subtle transparency */
+            pointer-events: none; /* Make unclickable so they focus on the pre-save */
+        }
+
+        .track-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(232, 218, 178, 0.05);
+        }
+
+        .track-info { display: flex; align-items: center; text-align: left; }
+        .track-num { font-family: monospace; font-size: 0.8rem; opacity: 0.3; margin-right: 15px; }
+        .track-name { font-size: 1.1rem; }
+
+        footer { font-style: italic; opacity: 0.5; font-size: 0.8rem; padding-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Conversations with Myself</h1>
+        <p class="subtitle">An EP by John Wiley</p>
+        <a href="https://distrokid.com/hyperfollow/johnwiley/conversations-with-myself/" target="_blank" class="presave-link">
+            Pre-save
+        </a>
+    </header>
+
+    <div class="tracklist">
+        <div class="track-item"><div class="track-info"><span class="track-num">01</span><span class="track-name">My letter to you</span></div></div>
+        <div class="track-item"><div class="track-info"><span class="track-num">02</span><span class="track-name">The Wait</span></div></div>
+        <div class="track-item"><div class="track-info"><span class="track-num">03</span><span class="track-name">My Little Lover Boy</span></div></div>
+        <div class="track-item"><div class="track-info"><span class="track-num">04</span><span class="track-name">My best friend</span></div></div>
+        <div class="track-item"><div class="track-info"><span class="track-num">05</span><span class="track-name">Sunny Day</span></div></div>
+        <div class="track-item"><div class="track-info"><span class="track-num">06</span><span class="track-name">Autumn Echoes</span></div></div>
+        <div class="track-item"><div class="track-info"><span class="track-num">07</span><span class="track-name">In the sky</span></div></div>
+    </div>
+
+    <footer>released under the twilight watch.</footer>
+
+</body>
+</html>
